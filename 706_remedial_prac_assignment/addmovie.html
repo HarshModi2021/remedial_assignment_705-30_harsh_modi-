@@ -1,0 +1,15 @@
+<form action="/add-movie" method="POST" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Movie Name" required><br>
+    <input type="text" name="director" placeholder="Director"><br>
+    <input type="text" name="producer" placeholder="Producer"><br>
+    <input type="date" name="release_date" placeholder="Release Date"><br>
+    <input type="file" name="image" accept="image/*"><br>
+    <button type="submit">Add Movie</button>
+  </form>
+  
+  <!-- Form for uploading additional images -->
+  <form action="/add-movie-images/{MOVIE_ID}" method="POST" enctype="multipart/form-data">
+    <input type="file" name="images" accept="image/*" multiple>
+    <button type="submit">Upload Images</button>
+  </form>
+  
